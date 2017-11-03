@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.fl_left{
+    float: left;
+}
+.fl_right{
+    float: right;
+}
+.cl{
+    clear: both;
+}
+li{
+    list-style: none;
+}
+/*footer 备案号*/
+.footer{
+    text-align: center;
+    font-size: 12px;
+    color: #515151;
+    padding-top: 80px;
+    line-height: 24px;
+}
+.footer a{
+    color: #515151;
+    font-size: 12px;
+    display: inline-block;
+}
+footer.footer a:hover{
+    text-decoration: underline;
+}
+.head {
+    height: 60px;
+    background-color: #34363e;
+    width: 100%;
+    overflow: hidden;
+}
+
+.head-content {
+    width: 1200px;
+    margin: 0 auto;
+    height: 60px;
+}
+
+.head-left {
+    float: left;
+    height: 100%;
+}
+
+.head-left a {
+    color: white;
+    font-size: 24px;
+    display: inline-block;
+    top: -10px;
+    position: relative;
+}
+
+.head-left img {
+    height: 50px;
+    width: 50px;
+    top: 5px;
+    position: relative;
+}
+
+.head-right {
+    float: right;
+}
+
+.head-right span a {
+    position: relative;
+    color: white;
+    top: 18px;
+}

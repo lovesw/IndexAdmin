@@ -1,0 +1,233 @@
+nav{
+    width:935px;
+}
+.first_content {
+    width: 1150px;
+}
+
+.head_left img {
+    width: 40px;
+    height: 40px;
+}
+
+.head_left span {
+    font-size: 24px;
+    top: -9px;
+}
+
+.first_left_img img {
+    width: 402px;
+    margin-top: 107px;
+    height: 455px;
+}
+.right_title img{
+    width: 190px;
+    height: 113px;
+    margin-bottom:25px;
+}
+.right_title,.forum_right span{
+    margin-top: 160px;
+    font-size: 18px;
+}
+.right_title button{
+    width: 187px;
+    height: 58px;
+    margin-top: 57px;
+}
+
+.down{
+    margin-top: 25px;
+}
+.down img{
+    width: 28px;
+    height: 26px;
+}
+/*第二模块*/
+
+.video{
+    width:565px;
+    /*height: 337px;*/
+}
+.game_title{
+    width:56px;
+    height: 44px;
+    margin: 111px 0 21px 0 ;
+}
+.second .first_content{
+    width: 935px;
+}
+.second span{
+    font-size: 18px;
+}
+.game{
+    width: 373px;
+    /*height: 331px;*/
+    margin: 100px 0 0 -15px;
+}
+.video_content{
+    margin-left: 193px;
+    margin-top: 50px;
+}
+.video_content img{
+    width: 42px;
+}
+.text_video{
+    margin-left: 59px;
+}
+/*第三块*/
+.forum_left img:nth-child(1) {
+    margin: 94px 0 0 136px;
+    width: 278px;
+}
+.forum_left img:nth-child(2) {
+    top:170px;
+    width: 337px;
+    /*left: ;*/
+}
+.third .first_content{
+    width: 935px;
+}
+
+.forum_right img:nth-child(1) {
+    margin-bottom: 21px;
+    width: 112px;
+}
+
+.forum_img {
+    margin-top: 90px;
+    width: 199px;
+}
+.forum_right {
+    margin-top: 136px;
+    /*margin-left: 82px;*/
+}
+/*第四块*/
+.forth .first_content{
+    width: 935px;
+    overflow: visible;
+}
+.forth .forth_content .forth_left span{
+    font-size: 18px;
+}
+.forth_left img:nth-child(1) {
+    margin-bottom: 26px;
+    width: 102px;
+}
+
+.forth_title {
+    margin-top: 0;
+}
+.forth_title img{
+    width: 313px;
+    margin-top: 59px;
+}
+
+.pic_car ul img {
+    width: 238px;
+    height: 421px;
+}
+.left,.right{
+    width: 40px;
+    top:176px;
+}
+.right{
+    left:536px;
+}
+.left{
+    left: -34px;
+}
+.left_img {
+    left: 30px;
+}
+.left_content{
+    left: -62px;
+}
+.right_img {
+    left: 317px;
+}
+.scale_img {
+    left: 173px;
+}
+.pic_car{
+    height: 450px;
+}
+/*动画*/
+@keyframes left_in {
+    from{
+        margin-left:0;
+        opacity: 0;
+    }
+    to{
+        margin-left:93px;
+        opacity: 1;
+    }
+}
+@keyframes right_in {
+    from{
+        margin-right:0;
+        opacity: 0;
+    }
+    to{
+        margin-right:125px;
+        opacity: 1;
+    }
+}
+@keyframes down_in {
+    from{
+        margin-top: 100px;
+        opacity: 0;
+    }
+    to{
+        margin-top: 45px;
+        opacity: 1;
+    }
+}
+@keyframes down_in_2 {
+    from{
+        margin-top: 610px;
+        opacity: 0;
+    }
+    to{
+        margin-top: 406px;
+        opacity: 1;
+    }
+}
+@keyframes left_in_2 {
+    from{
+        margin-left: 136px;
+        opacity: 0;
+    }
+    to{
+        margin-left: 236px;
+        opacity: 1;
+    }
+}
+
+@keyframes top_in_fast {
+    from{
+        margin-top: 0;
+    }
+    to{
+        margin-top: 147px;
+    }
+}
+
+@keyframes down_in_fast {
+    from{
+        margin-top: 140px;
+    }
+    to{
+        margin-top: 49px;
+    }
+}
+/*左边导航栏*/
+.nav_index{
+    left: 79px;
+    top: 65px;
+}
+.nav_index li{
+    height:89px;
+}
+.nav_index li:nth-child(1),.nav_index li:nth-child(6){
+    height:59px;
+}

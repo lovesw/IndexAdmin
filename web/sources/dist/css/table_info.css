@@ -1,0 +1,198 @@
+/*input样式*/
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:#afafaf;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#afafaf;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #afafaf;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:#afafaf;
+}
+/*---------------------------------------*/
+.table{
+    width: 1200px;
+    margin: 50px auto;
+    /*margin-top: 50px;*/
+    border: 1px solid #DEDFE1;
+    background-color: #fff;
+}
+
+.table_classification{
+    padding: 25px 0 25px 33px;
+    font-size: 16px;
+    position: relative;
+}
+.table_classification>div{
+    display: inline-block;
+}
+.classification_left a{
+    color: #a1a1a1;
+}
+.tab-item{
+    margin: 0 30px 0 0;
+    display: inline-block;
+    vertical-align: top;
+    padding-bottom: 5px;
+}
+.classification_center{
+    width: 287px;
+    height: 38px;
+    margin: 0 auto;
+    margin-left: 20%;
+    border: 1px solid #D5D5D5;
+    border-radius: 2px;
+    position: relative;
+}
+a.search{
+    background-image: url("../image/choice/global.png");
+}
+.classification_center .search{
+    background-position: -216px 0;
+}
+.search{
+    position: absolute;
+    z-index: 2;
+    width: 43px;
+    height: 38px;
+    top: 0;
+    right: 0;
+    background-repeat: no-repeat;
+}
+.classification_center input{
+    border: none;
+    width: 100%;
+    height: 38px;
+    line-height: 18px;
+    padding: 10px 50px 10px 10px;
+    outline: 0;
+    background: 0 0;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.classification_right{
+    position: absolute;
+    right: 14px;
+}
+.classification_right a{
+    width: 102px;
+    height: 38px;
+    padding: 0;
+    text-align: center;
+    line-height: 38px;
+    font-size: 16px;
+    background: #f5f5f5;
+    border: 1px solid #CDCDCD;
+    color: #636363;
+    display: inline-block;
+    border-radius: 2px;
+}
+.table{
+    border-bottom: none;
+}
+/*表格样式*/
+table{
+    border: 1px solid #DEDFE1;
+}
+
+th,td{
+    text-align: center;
+    width: 1%;
+}
+table span{
+    display: inline-block;
+    padding: 20px 0;
+    width: 100%;
+    border-bottom:  1px solid #DEDFE1;;
+}
+a.checked{
+    color: #2d8ed8;
+    border-bottom: 2px solid #2d8ed8;
+}
+.able{
+    display: none;
+}
+.info_total{
+    margin-top: 15px;
+    font-size: 14px;
+    color: #636363;
+    margin-right: 10px;
+}
+.info_total span{
+    color: #5e5e5e;
+    font-weight: 600;
+}
+.delete{
+    cursor: pointer;
+}
+.delete:hover{
+    color: #1d9db7;
+}
+/*删除提示model*/
+.model{
+    background-color: rgba(0,0,0,0.1);
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+}
+.model_div{
+    position: absolute;
+    width: 250px;
+    height: 150px;
+    border-radius: 5px;
+    background-color: white;
+    left: calc(50% - 111px);
+    top: calc(50% - 142px);
+    box-sizing: border-box;
+    animation: top_down 1s;
+}
+.delete_title{
+    padding: 8px;
+    background-color: #f2f2f2;
+}
+.delete_content{
+    padding: 20px 10px;
+}
+.delete_btn{
+    padding: 20px 8px;
+}
+.delete_btn a{
+    padding: 5px 15px;
+    color: white;
+}
+.delete_btn a:nth-child(1){
+    border-radius: 3px;
+    background-color: #00c6fb;
+}
+.delete_btn a:nth-child(2){
+    border-radius: 3px;
+    background-color: red;
+}
+@keyframes top_down {
+    from{
+        top:calc(50% - 200px);
+        opacity: 0;
+    }
+    to{
+        top:calc(50% - 142px);
+        opacity: 1;
+    }
+}
+@-moz-keyframes top_down {
+    from{
+        top:calc(50% - 200px);
+        opacity: 0;
+    }
+    to{
+        top:calc(50% - 142px);
+        opacity: 1;
+    }
+}
+.downofflie1{
+    cursor: pointer;
+}

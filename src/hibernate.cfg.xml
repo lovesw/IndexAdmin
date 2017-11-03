@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+
+
+    <session-factory>
+        <!--开启二级缓存-->
+
+        <property name="hibernate.cache.use_second_level_cache">true</property>
+        <!--二级缓存提供商-->
+        <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory
+        </property>
+        <!--查询缓存-->
+        <property name="hibernate.cache.use_query_cache">true</property>
+
+
+        <!-- 显示SQL语句 -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.use_sql_comments">true</property>
+        <property name="hibernate.format_sql">false</property>
+        <!-- 定义方言 -->
+        <property name="hibernate.dialect">
+            org.hibernate.dialect.MySQLDialect
+        </property>
+        <!-- 定义数据库的访问方式 update 或者 create 最常用 -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+
+    </session-factory>
+</hibernate-configuration>
