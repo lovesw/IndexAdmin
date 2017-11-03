@@ -23,7 +23,7 @@
     </listener>
     <!--单一登陆监听器-->
     <listener>
-        <listener-class>com.admin.listenner.SessionLoginListener</listener-class>
+        <listener-class>com.data.listenner.SessionLoginListener</listener-class>
     </listener>
     <!--编码字符集统一为UTF-8（过滤器） -->
     <filter>
