@@ -18,9 +18,18 @@ public class Theme {
     private String content;//主题介绍
     private String cid;//所属分类的id
     private Date date;//时间
-    private byte[] image;//展示图
-    private byte[] bimage;//banner图
-    private boolean state;//状态
+    private String image;//展示图
+    private String bimage;//banner图
+    private boolean state;//上线状态
+    private int status;//审核状态
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
 
     public boolean isState() {
         return state;
@@ -78,19 +87,19 @@ public class Theme {
         this.date = date;
     }
 
-    public byte[] getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(byte[] image) {
+    public void setImage(String image) {
         this.image = image;
     }
 
-    public byte[] getBimage() {
+    public String getBimage() {
         return bimage;
     }
 
-    public void setBimage(byte[] bimage) {
+    public void setBimage(String bimage) {
         this.bimage = bimage;
     }
 }

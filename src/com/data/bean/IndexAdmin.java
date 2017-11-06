@@ -18,6 +18,15 @@ public class IndexAdmin {
     private String image;//图片
     private String bimage;//背景图片
     private Date date;
+    private boolean state;//状态，用于控制是否属于在页面中展示
+
+    public boolean isState() {
+        return state;
+    }
+
+    public void setState(boolean state) {
+        this.state = state;
+    }
 
     public String getId() {
         return id;

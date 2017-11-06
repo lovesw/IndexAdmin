@@ -10,11 +10,11 @@ import java.util.Date;
 public class IndexCase {
 
     @Id
-    private String id;//标题
+    private String id;//标题的id
     private String title;//主题名称
     private Long down;//下载量
     private Date date;//时间
-    private byte[] image;//展示图
+    private String image;//展示图
     private String tid;//主题id
     private boolean state;//状态
 
@@ -58,11 +58,11 @@ public class IndexCase {
         this.date = date;
     }
 
-    public byte[] getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(byte[] image) {
+    public void setImage(String image) {
         this.image = image;
     }
 

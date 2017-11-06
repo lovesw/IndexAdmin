@@ -63,9 +63,5 @@ public class DatabaseIdUtils {
         return (result.toString());
     }
 
-    public static void main(String[] args) throws NoSuchAlgorithmException {
-        String id = DatabaseIdUtils.getSessionId();
-        System.out.println(id);
-    }
 
 }

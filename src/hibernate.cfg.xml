@@ -28,5 +28,11 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
 
 
+        <mapping class="com.data.bean.Account"/>
+        <mapping class="com.data.bean.Theme"/>
+        <mapping class="com.data.bean.IndexAdmin"/>
+        <mapping class="com.data.bean.ThemeScreenshot"/>
+        <mapping class="com.data.bean.ThemeClass"/>
+        <mapping class="com.data.bean.IndexCase"/>
     </session-factory>
 </hibernate-configuration>

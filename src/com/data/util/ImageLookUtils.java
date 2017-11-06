@@ -15,7 +15,12 @@ import java.io.OutputStream;
  * @create 2017-09-28 17:13
  **/
 public class ImageLookUtils {
-
+    /**
+     * 图片响应
+     *
+     * @param inputStream
+     * @param response
+     */
     public static void responseImage(byte[] inputStream, HttpServletResponse response) {
         try {
             response.setContentType("image/png");
@@ -35,7 +40,7 @@ public class ImageLookUtils {
      * @param inputStream
      * @return
      */
-    public static boolean uploadFile(String path, CommonsMultipartFile inputStream) {
+    public static boolean saveFile(String path, CommonsMultipartFile inputStream) {
         try {
             FileUtils.copyInputStreamToFile(inputStream.getInputStream(), new File(path));
             return true;
@@ -49,7 +54,7 @@ public class ImageLookUtils {
     /**
      * 读取图片
      *
-     * @param path
+     * @param path 传入文件的路径
      * @return 返回文件二进制文件
      */
     public static byte[] readImage(String path) {
@@ -63,7 +68,7 @@ public class ImageLookUtils {
     }
 
     /**
-     * 读取图片
+     * 读取图片，传入读取的文件对象
      *
      * @return 返回文件二进制文件
      */
@@ -75,4 +80,68 @@ public class ImageLookUtils {
         }
         return null;
     }
+
+    /**
+     * 读取图片，传入读取的文件对象
+     *
+     * @return 返回文件二进制文件
+     */
+    public static byte[] readImage(String PATH, String fileName) {
+        String path;
+        if (CheckDataUtils.stringUtils(fileName)) {
+            path = PATH + fileName;
+        } else {
+            //默认图片
+            path = PATH + FinalStringUtils.IMAGEDEFAULT;
+        }
+        File file = new File(path);
+        if (file.isFile()) {
+            return ImageLookUtils.readImage(file);
+        }
+
+        return null;
+    }
+
+    /**
+     * 根据文件对象删除文件
+     *
+     * @param file
+     * @return
+     */
+    public static boolean deleteImage(File file) {
+        return file.delete();
+    }
+
+    /**
+     * 根据文件对象删除文件
+     *
+     * @param path
+     * @return
+     */
+    public static boolean deleteImage(String path) {
+        File file = new File(path);
+        if (file.isFile()) {
+            return file.delete();
+        }
+        return false;
+    }
+
+    /**
+     * 获取文件的后缀
+     *
+     * @param file
+     * @return
+     */
+    public static String getFileSuffix(CommonsMultipartFile file) {
+        if (file != null) {
+            String filename = file.getOriginalFilename();
+            String s = filename.substring(filename.lastIndexOf("."));//获取文件的后缀
+            return s;
+        }
+        return null;
+
+
+    }
+
+
 }

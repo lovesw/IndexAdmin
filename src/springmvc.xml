@@ -12,8 +12,7 @@
     <context:component-scan base-package="com.*.action"/>
 
 
-
-        <!-- 配置视图解析器 如何把handler 方法返回值解析为实际的物理视图 -->
+    <!-- 配置视图解析器 如何把handler 方法返回值解析为实际的物理视图 -->
     <bean
             class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/"/>
@@ -26,57 +25,13 @@
         <property name="defaultEncoding" value="UTF-8"/>
         <!--<property name="uploadTempDir" value="/SafeFishServer/temp/"/>-->
     </bean>
-    <!--配置登录拦截器-->
     <mvc:interceptors>
         <mvc:interceptor>
             <!--系统管理员相关-->
             <mvc:mapping path="/*/admin/*"/>
-            <mvc:mapping path="/*/user/*"/>
-            <mvc:mapping path="/*/fillMassageAction/*"/>
-            <mvc:mapping path="/android/registAction/choiceIdentity"/>
             <!--排除登录拦截-->
-            <mvc:exclude-mapping path="/android/fillMassageAction/activeEmail"/>
-            <mvc:exclude-mapping path="/indexUserAction/user/activeEmailChange"/>
             <bean class="com.data.interceptor.LoginInterceptor"/>
 
         </mvc:interceptor>
     </mvc:interceptors>
-
-    <!--账号激活状态拦截器-->
-    <mvc:interceptors>
-        <mvc:interceptor>
-            <!--系统管理员相关-->
-            <mvc:mapping path="/*/admin/*"/>
-            <mvc:mapping path="/*/fillMassageAction/*"/>
-            <!--排除登录拦截-->
-            <mvc:exclude-mapping path="/android/fillMassageAction/activeEmail"/>
-            <mvc:exclude-mapping path="/indexUserAction/user/activeEmailChange"/>
-            <bean class="com.data.interceptor.EmailActiveInterceptor"/>
-        </mvc:interceptor>
-    </mvc:interceptors>
-
-    <!--账号身份选择拦截器-->
-    <mvc:interceptors>
-        <mvc:interceptor>
-            <!--系统管理员相关-->
-            <mvc:mapping path="/*/admin/*"/>
-            <mvc:mapping path="/*/user/*"/>
-            <mvc:mapping path="/android/registAction/choiceIdentity"/>
-            <!--排除登录拦截-->
-            <mvc:exclude-mapping path="/indexUserAction/user/activeEmailChange"/>
-            <bean class="com.data.interceptor.IdentityChoiceInterceptor"/>
-
-        </mvc:interceptor>
-    </mvc:interceptors>
-    <!--上传界面拦截器-->
-    <mvc:interceptors>
-        <mvc:interceptor>
-            <!--软件上传相关进入拦截器-->
-            <mvc:mapping path="/SoftwareAction/user/*"/>
-            <mvc:exclude-mapping path="/indexUserAction/user/activeEmailChange"/>
-            <bean class="com.data.interceptor.SoftwareUploadInterceptor"/>
-        </mvc:interceptor>
-    </mvc:interceptors>
-
-
 </beans>

@@ -20,18 +20,6 @@ public class CheckDataUtils {
         return Pattern.matches(pattern, email);
     }
 
-    /**
-     * 检测账号身份是公司与个人两种身份
-     *
-     * @param type
-     * @return
-     */
-    public static boolean checkAccountTepe(int type) {
-        if (type == FinalStringUtils.PERSON || type == FinalStringUtils.COMPANY)
-            return true;
-        return false;
-
-    }
 
     /**
      * 判断字符串是空与“”
@@ -73,10 +61,12 @@ public class CheckDataUtils {
      */
     public static boolean iconUtils(String icon) {
         String[] s = {".PNG", ".JPG", ".GIF", ".JPEG"};
-        icon = icon.toUpperCase();
-        for (String ss : s) {
-            if (icon.equals(ss))
-                return true;
+        if (stringUtils(icon)) {
+            icon = icon.toUpperCase();
+            for (String ss : s) {
+                if (icon.equals(ss))
+                    return true;
+            }
         }
         return false;
     }
@@ -95,16 +85,6 @@ public class CheckDataUtils {
                 return true;
         }
         return false;
-    }
-
-    /**
-     * 去掉字符串的首尾空格
-     *
-     * @param s
-     * @return
-     */
-    public static String trimString(String s) {
-        return s.trim();
     }
 
     public static void main(String[] args) {
