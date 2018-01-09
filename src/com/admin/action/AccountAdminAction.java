@@ -22,7 +22,6 @@ public class AccountAdminAction {
     @Autowired
     private AccountAdminService accountAdminService;
 
-
     /**
      * 账号列表
      *
